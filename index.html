@@ -1,0 +1,52 @@
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+  <link rel="stylesheet" href="src/styles/styles.css">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
+</head>
+
+<body ng-app="spotifyApp" ng-cloak>
+  <!--
+    Your HTML content here
+  -->
+
+  <!-- Nav bar -->
+  <md-content class="md-padding">
+    <md-nav-bar
+      md-selected-nav-item="currentNavItem"
+      nav-bar-aria-label="navigation links">
+      <md-nav-item md-nav-href="/" name="home">
+        Home
+      </md-nav-item>
+      <md-nav-item md-nav-href="/about" name="about">
+        About
+      </md-nav-item>
+      <md-nav-item md-nav-href="/reddit" name="reddit">
+        Reddit
+      </md-nav-item>
+    </md-nav-bar>
+    <div class="ext-content">
+      <ng-view></ng-view>
+    </div>
+  </md-content>
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-route/angular-route.min.js"></script>
+  <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+  <script src="node_modules/angular-aria/angular-aria.min.js"></script>
+  <script src="node_modules/angular-messages/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="node_modules/angular-material/angular-material.min.js"></script>
+  <script src="src/app.js"></script>
+  <script src="src/service.js"></script>
+  <!-- controller -->
+  <script src="src/app/controller/homecontroller.js"></script>
+  <script src="src/app/controller/artistcontroller.js"></script>
+  <script src="src/app/controller/redditcontroller.js"></script>
+
+</body>
+</html>

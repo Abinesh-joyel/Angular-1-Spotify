@@ -1,0 +1,26 @@
+<h1>Spotify Application search for the favourite music up to date</h1>
+  
+
+  <form>
+  	<div md-theme="formtheme">
+	    <md-input-container md-no-float class="md-block md-accent">
+	         <input ng-model="musickey" placeholder="Search music..." ng-change="getartist(musickey)">
+	    </md-input-container>
+	</div>
+  </form>
+
+  <div class="artistlist">
+  	 <md-content>
+      <md-list ng-if="artist.length">
+		  <md-list-item class="md-2-line" ng-repeat="art in artist track by $index">
+	          <img ng-src="{{art.images[2].url}}" class="md-avatar" alt="{{}}" />
+	          <div class="md-list-item-text">
+	            <h3><a ng-href="artistdetails/{{art.id}}" class="arthyperlink">{{ art.name }}</a></h3>
+	            <p ng-if="art.genres.length"><span ng-repeat="genres in art.genres">{{genres}}</span></p>
+	            <p ng-if="!art.genres.length">No genres</p>
+	          </div>
+	       </md-list-item>
+	   </md-list>
+	  </md-content>
+  </div>
+

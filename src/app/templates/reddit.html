@@ -1,0 +1,22 @@
+<md-content class="mainRedditContent">
+	<div id="redditContent">
+		<md-list ng-if="redditStories.length">
+			<md-list-item class="md-2-line redditstories" ng-repeat="stories in redditStories">
+			  <img ng-src="{{stories.data.thumbnail}}" class="md-avatar" alt="{{}}" ng-if="stories.data.thumbnail.startsWith('http')"/>
+			  <img ng-src="http://b.thumbs.redditmedia.com/rvkg16CTfIzqYdqq6Xg5l5vkOFcf9FYyfjUN4BeANis.jpg" class="md-avatar"
+			  	alt="{{}}" ng-if="!stories.data.thumbnail.startsWith('http')"/>
+			  <div class="md-list-item-text" layout="column">
+			     <h2>{{ stories.data.title }}</h2>
+	      		 <p>{{ stories.data.domain }}</p>
+			  </div>
+			</md-list-item>
+		</md-list>
+		<div layout="row" layout-sm="column" layout-align="space-around">
+      		<md-progress-circular md-mode="indeterminate" ng-disabled="!processing"></md-progress-circular>
+    	</div>
+		<md-button class="md-fab md-fab-bottom-right scroll-fab" aria-label="Back to Top" id="fabbtn" ng-click="scrolltop()">
+				<img ng-src="../../src/img/icons/ic_keyboard_arrow_up_white_24dp_1x.png"/>
+	            <!-- <md-icon md-svg-src="../../src/img/icons/ic_keyboard_arrow_up_white_24dp_1x.png"></md-icon> -->
+	    </md-button>
+	</div>
+</md-content>

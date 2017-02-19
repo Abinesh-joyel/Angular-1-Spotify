@@ -1,0 +1,53 @@
+md-content .ext-content {
+  padding: 50px;
+  margin: 20px;
+  width:auto;
+  height: auto;
+  min-height: 100%;
+  background-color: #000;
+  color:white;
+  }
+
+  .arthyperlink{
+  	text-decoration: none;
+  	color: inherit;
+  }
+  .albumcontent{
+    background-color: #303030;
+    border-radius: 3px solid #BDBDBD;
+    border-radius: 5px;
+  }
+
+  .albumflex{
+    padding: 15px 12px;
+    background-color: #000;
+  }
+
+  .albumimage,.albumtext{
+    text-align: center;
+    padding: 12px;
+  }
+  
+  .albumimage img{
+    border: 9px solid #000;
+    border-radius: 5px;
+  }
+  
+  .md-fab.scroll-fab{
+    position: fixed !important;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s,
+    -webkit-transform 0.2s;
+}
+  .scroll-fab.scrolling{
+    transform: scale(1);
+  }
+  .mainRedditContent{
+    overflow: hidden !important;
+  }
+
+
