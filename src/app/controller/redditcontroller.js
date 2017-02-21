@@ -49,7 +49,17 @@ spotify.controller('redditctrl',function($scope,redditservice,$window,$timeout){
 	}
 
 	$scope.scrolltop = function(){
-		$window.scrollTo(0,0);
+		//$window.scrollTo(0,0);
+		var currentY = $window.pageYOffset;
+	    var targetY = redditContent[0].offsetTop;
+		var animator = $timeout($scope.scrolltop,24);
+		if(currentY > targetY){
+			scrollY = currentY-80;
+			$window.scrollTo(0, scrollY);
+		} else {
+			console.log('cleared');
+			$timeout.cancel(animator);
+		}
 	}
 
 	angular.element(document).ready(function(){
